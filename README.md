@@ -22,9 +22,9 @@
 - [火山引擎方舟文档](https://www.volcengine.com/docs/82379/1494384)
 
 ## 安装
-Edge应用商店安装：
-https://reurl.cc/Vn7nWA
-本地编译安装：
+- Edge应用商店安装：
+  https://reurl.cc/Vn7nWA
+- 本地编译安装：
 1. 解压发布包。
 2. Chrome 打开 `chrome://extensions/`；Edge 打开 `edge://extensions/`。
 3. 开启“开发者模式”。
