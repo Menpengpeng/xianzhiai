@@ -1,0 +1,10 @@
+﻿{
+  "name": "xianzhi-ai-extension",
+  "version": "1.0.7",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/core.test.mjs tests/price.test.mjs tests/image.test.mjs tests/product-text.test.mjs tests/service-worker.test.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

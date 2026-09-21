@@ -1,0 +1,26 @@
+﻿:root {
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  color: #222;
+}
+* { box-sizing: border-box; }
+body { width: 330px; margin: 0; background: #f7f7f4; }
+header { display: grid; grid-template-columns: 44px 1fr auto; gap: 11px; align-items: center; padding: 16px; background: #ffe600; border-bottom: 2px solid #222; }
+header img { width: 44px; height: 44px; border: 2px solid #222; border-radius: 12px; }
+header strong, header span { display: block; }
+header strong { font-size: 18px; }
+header span { margin-top: 3px; font-size: 11px; }
+.switch input { position: absolute; opacity: 0; }
+.switch i { display: block; position: relative; width: 42px; height: 24px; border: 2px solid #222; border-radius: 999px; background: #fff; cursor: pointer; }
+.switch i::after { content: ""; position: absolute; left: 2px; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: #222; transition: transform .18s; }
+.switch input:checked + i::after { transform: translateX(18px); }
+main { display: grid; gap: 9px; padding: 14px; }
+.provider { padding: 13px; border: 1px solid #e4e3de; border-radius: 12px; background: #fff; }
+.provider span, .provider strong, .provider small { display: block; }
+.provider span { color: #777; font-size: 11px; }
+.provider strong { margin-top: 4px; font-size: 15px; }
+.provider small { margin-top: 2px; color: #666; }
+.notice { margin: 0; padding: 10px 12px; border-radius: 10px; background: #fff6ca; color: #6b5700; font-size: 12px; line-height: 1.45; }
+button { width: 100%; min-height: 40px; border: 1px solid #222; border-radius: 10px; background: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+button.primary { background: #ffe600; box-shadow: 3px 3px 0 #222; }
+button:disabled { opacity: .45; cursor: not-allowed; box-shadow: none; }
+footer { padding: 0 14px 14px; color: #888; font-size: 10px; text-align: center; }

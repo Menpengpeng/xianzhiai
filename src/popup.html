@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>闲值 AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon48.png" alt="">
+    <div>
+      <strong>闲值 AI</strong>
+      <span id="status">正在读取状态…</span>
+    </div>
+    <label class="switch" title="全局启用">
+      <input id="enabled" type="checkbox">
+      <i aria-hidden="true"></i>
+    </label>
+  </header>
+
+  <main>
+    <div class="provider">
+      <span>默认模型</span>
+      <strong id="provider-name">—</strong>
+      <small id="provider-model">—</small>
+    </div>
+    <p id="notice" class="notice" hidden></p>
+    <button id="open-panel" class="primary" type="button">在当前商品页打开</button>
+    <button id="reenable-site" type="button" hidden>重新启用当前网站</button>
+    <button id="open-options" type="button">模型与插件设置</button>
+  </main>
+
+  <footer>AI 建议仅供参考，请结合商品实况判断。</footer>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿node_modules/
+.DS_Store
+
+# 本地密钥与环境配置
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# 本地发布产物与历史解压包
+xianzhi-ai-extension-v*.zip
+xianzhi-ai-extension-v*/

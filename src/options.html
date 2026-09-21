@@ -1,0 +1,120 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>闲值 AI 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="../icons/icon48.png" alt="">
+      <div>
+        <strong>闲值 AI</strong>
+        <span>模型与使用设置</span>
+      </div>
+    </div>
+    <label class="switch-row">
+      <span>启用插件</span>
+      <input id="global-enabled" type="checkbox">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">纯浏览器运行</span>
+        <h1>选择你信任的 AI 服务</h1>
+        <p>API Key 仅保存在当前浏览器的扩展本地存储中，请只在自己的设备上使用。</p>
+      </div>
+      <div class="privacy-badge">不经过闲值 AI 后端</div>
+    </section>
+
+    <div class="layout">
+      <nav class="provider-nav" aria-label="模型提供商"></nav>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <p class="section-kicker">当前提供商</p>
+            <h2 id="provider-name">DeepSeek</h2>
+          </div>
+          <label class="active-provider">
+            <input id="active-provider" type="radio" name="active-provider">
+            设为默认
+          </label>
+        </div>
+
+        <form id="provider-form" novalidate>
+          <label>
+            <span>API Key</span>
+            <span class="password-field">
+              <input id="api-key" type="password" autocomplete="off" placeholder="请输入 API Key">
+              <button id="toggle-key" type="button">显示</button>
+            </span>
+            <small>不会注入闲鱼页面，也不会发送给其他提供商。</small>
+          </label>
+
+          <div class="field-grid">
+            <label>
+              <span>模型名称 / 接入点 ID</span>
+              <input id="model" type="text" autocomplete="off" required>
+            </label>
+            <label>
+              <span>请求超时</span>
+              <select id="timeout">
+                <option value="30000">30 秒</option>
+                <option value="60000">60 秒</option>
+                <option value="120000">120 秒</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span>Base URL</span>
+            <input id="base-url" type="url" autocomplete="off" required>
+            <small>将自动补全 <code>/chat/completions</code>。自定义地址会单独请求访问权限。</small>
+          </label>
+
+          <label>
+            <span>温度：<output id="temperature-value">0.2</output></span>
+            <input id="temperature" type="range" min="0" max="1" step="0.1">
+          </label>
+
+          <div class="docs-row">
+            <a id="docs-link" target="_blank" rel="noreferrer">查看提供商官方文档</a>
+          </div>
+
+          <div class="actions">
+            <button class="button secondary" id="test-provider" type="button">测试连接</button>
+            <button class="button danger" id="clear-key" type="button">清除密钥</button>
+            <button class="button primary" type="submit">保存配置</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <section class="site-panel">
+      <div>
+        <p class="section-kicker">关闭记录</p>
+        <h2>已停用的网站</h2>
+        <p>在网页中选择“当前网站禁用”后，可在这里重新启用。</p>
+      </div>
+      <div id="disabled-sites" class="disabled-sites"></div>
+    </section>
+
+    <section class="danger-zone">
+      <div>
+        <h2>重置本地数据</h2>
+        <p>清除全部 API Key、模型配置和关闭记录，恢复首次安装状态。</p>
+      </div>
+      <button class="button danger" id="reset-all" type="button">全部重置</button>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="options.js"></script>
+</body>
+</html>
