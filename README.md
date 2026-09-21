@@ -1,6 +1,10 @@
 ﻿# 闲值 AI 浏览器插件
 
 闲值 AI 是一个在闲鱼商品详情页使用的 AI 估价助手。它是纯浏览器扩展，不依赖自建后端；商品文字会从当前页面提取，并由扩展直接发送到用户选择的模型服务。
+<img width="1910" height="914" alt="估价结果" src="https://github.com/user-attachments/assets/b7aac93b-463a-4fcb-b538-85609f2051a5" />
+<img width="1910" height="914" alt="模型配置" src="https://github.com/user-attachments/assets/dd94e2f9-fe64-4e72-ad04-6cd46b413c87" />
+
+
 
 ## 支持的提供商
 
@@ -18,7 +22,9 @@
 - [火山引擎方舟文档](https://www.volcengine.com/docs/82379/1494384)
 
 ## 安装
-
+Edge应用商店安装：
+https://reurl.cc/Vn7nWA
+本地编译安装：
 1. 解压发布包。
 2. Chrome 打开 `chrome://extensions/`；Edge 打开 `edge://extensions/`。
 3. 开启“开发者模式”。
